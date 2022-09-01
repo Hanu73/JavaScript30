@@ -39,7 +39,11 @@ label {
     display: flex;
     align-items: center;
   }
-  .scenery{
+  .scenery {
     width: 80%;
+  }
+
+  .heading h2 {
+    font-size: 25px;
   }
 }
