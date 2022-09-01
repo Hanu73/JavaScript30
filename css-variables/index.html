@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playing with CSS Variables</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h2>Update CSS Variables with JS</h2>
+      </div>
+
+      <div class="controls">
+        <label for="spacing">Spacing : </label>
+        <input
+          type="range"
+          id="spacing"
+          name="spacing"
+          min="10"
+          max="200"
+          value="10"
+          data-units="px"
+        />
+
+        <label for="blur">Blur : </label>
+        <input
+          type="range"
+          id="blur"
+          name="blur"
+          min="0"
+          max="25"
+          value="0"
+          data-units="px"
+        />
+
+        <label for="border">Border Color :</label>
+        <input type="color" id="border" name="border" value="#FA8072" />
+      </div>
+
+      <img src="assets/scenery.png" class="scenery" loading="lazy" />
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

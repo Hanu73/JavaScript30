@@ -1,0 +1,42 @@
+:root {
+  ---spacing: 10px;
+  ---blur: 0px;
+  ---border: #fa8072;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  flex: 1;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+.scenery {
+  padding: var(---spacing);
+  filter: blur(var(---blur));
+  background-color: var(---border);
+}
+
+.controls {
+  margin-bottom: 50px;
+}
+
+input {
+  width: 100px;
+}
+
+label {
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 680px) {
+  body {
+    display: flex;
+    align-items: center;
+  }
+}
