@@ -20,6 +20,7 @@ input {
   padding: 10px;
   border-radius: 8px;
   box-shadow: 14px 7px 20px 2px rgb(2 2 2 / 17%);
+  font-family: "Edu QLD Beginner", cursive;
 }
 input::placeholder {
   font-family: "Edu QLD Beginner", cursive;
