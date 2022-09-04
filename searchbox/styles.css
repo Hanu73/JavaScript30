@@ -1,0 +1,42 @@
+html {
+  box-sizing: border-box;
+  background: salmon;
+  font-family: "helvetica neue";
+  font-size: 20px;
+  font-weight: 200;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input {
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 14px 7px 20px 2px rgb(2 2 2 / 17%);
+}
+.search-form {
+  max-width: 400px;
+  margin: 50px auto;
+}
+input:focus-visible {
+  outline: 0;
+}
+input.search {
+  margin: 0;
+  text-align: center;
+  outline: 0;
+  border: 10px solid #f7f7f7;
+  width: 120%;
+  left: -10%;
+  position: relative;
+  top: 10px;
+  z-index: 2;
+  font-size: 40px;
+}
