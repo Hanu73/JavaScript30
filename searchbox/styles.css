@@ -64,3 +64,10 @@ li {
 .highlight {
   font-weight: bold;
 }
+
+@media only screen and (max-width: 600px) {
+  input.search {
+    width: 100%;
+    left: 0%;
+  }
+}
