@@ -48,6 +48,42 @@ canvas.addEventListener("mousemove", draw);
 canvas.addEventListener("mouseup", (e) => {
   isDrawing = false;
 });
+
 canvas.addEventListener("mouseout", (e) => {
   isDrawing = false;
 });
+
+canvas.addEventListener(
+  "touchstart",
+  function (e) {
+    isDrawing = true;
+    osX = e.touches[0].pageX;
+    osY = e.touches[0].pageY;
+  },
+  0
+);
+
+canvas.addEventListener(
+  "touchend",
+  function () {
+    isDrawing = false;
+  },
+  0
+);
+
+canvas.addEventListener(
+  "touchmove",
+  function (e) {
+    if (isDrawing) {
+      with (ctx) {
+        beginPath();
+        moveTo(osX, osY);
+        lineTo(e.touches[0].pageX, e.touches[0].pageY);
+        stroke();
+      }
+      osX = e.touches[0].pageX;
+      osY = e.touches[0].pageY;
+    }
+  },
+  0
+);
