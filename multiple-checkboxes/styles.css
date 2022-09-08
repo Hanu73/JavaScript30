@@ -1,0 +1,46 @@
+html {
+  font-family: sans-serif;
+  background: rgba(50, 205, 50, 0.763);
+}
+
+.list {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.todo:last-child {
+  border-bottom: 0;
+}
+
+input:checked + p {
+  background: #f9f9f9;
+  text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+.todo-name {
+  margin: 0;
+  padding: 20px;
+  flex: 1;
+  font-family: "helvetica neue";
+  font-size: 20px;
+  font-weight: 200;
+  border-left: 1px solid #d1e2ff;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
