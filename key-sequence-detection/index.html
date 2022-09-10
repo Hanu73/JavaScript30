@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Sequence Detection</title>
+    <script
+      type="text/javascript"
+      src="https://www.cornify.com/js/cornify.js"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
+    </style>
+  </head>
+  <style>
+    #__cornify_count {
+      display: none;
+    }
+    html {
+      background: #000;
+      font-family: "Figtree", sans-serif;
+    }
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      color: white;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    .title {
+      border-bottom: 3px solid limegreen;
+      margin-bottom: 7px;
+      padding-bottom: 4px;
+    }
+    .hl {
+      color: salmon;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h2 class="title">Key Sequence Detection</h2>
+      <small
+        >Use Case : Cheat-codes while playing a game ( Remember Vice City game?
+        😉)</small
+      >
+      <br />
+      <br />
+      <h4>
+        If you are on a Desktop / Laptop, Just press the word
+        <span class="hl">"Boom" </span>& see the magic🌈
+      </h4>
+
+      <small
+        >You can do it multiple times 😍, In case there's a typing mistake -
+        just refresh the page and retry !</small
+      >
+
+      <!-- Uncomment the below if we want to show the typed text to user on screen  -->
+      <!-- <p>Typed Text - <span class="typed"></span></p> -->
+    </div>
+  </body>
+  <script>
+    window.addEventListener("keyup", triggerKey);
+    let word = [];
+
+    function triggerKey(e) {
+      //   const typedWord = document.querySelector(".typed");
+      word.push(e.key.toLowerCase());
+      typedWord.textContent = word.join("");
+      if (word.join("") == "boom") {
+        cornify_add();
+        word = [];
+      }
+    }
+  </script>
+</html>
