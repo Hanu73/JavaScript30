@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+  background: lime;
+  font-family: "helvetica neue";
+  font-size: 20px;
+  font-weight: 200;
+}
+.container {
+  margin: 5% 10% 10% 10%;
+  background: hsl(0deg 0% 100% / 48%);
+  padding: 1%;
+}
+.align-left {
+  float: left;
+  margin-right: 2%;
+}
+.align-right {
+  float: right;
+  margin-left: 2%;
+}
+.full-width {
+  width: 100%;
+  margin-bottom: 3%;
+}
+.slide-in {
+  transition: all 0.5s;
+  opacity: 0;
+}
+.align-left.slide-in {
+  transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+  transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  img {
+    width: 100%;
+  }
+}
