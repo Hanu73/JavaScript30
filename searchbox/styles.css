@@ -48,7 +48,7 @@ li {
   list-style-type: none;
 }
 .suggestions li {
-  left: -10%;
+  left: -6%;
   position: relative;
   box-shadow: 14px 7px 20px 2px rgb(2 2 2 / 17%);
   padding: 2%;
