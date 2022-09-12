@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Reference VS Copy</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Please open the console</h1>
+    <script>
+      // Array Copy
+      const team1 = ["John", "Markson", "Paul", "Scott", "Ravi", "Suresh"];
+
+      console.log("The Array -", team1);
+
+      console.log("1) Copying an array using Slice");
+      const team2 = team1.slice();
+      team2[2] = "Sai";
+      console.log("Copied Array -", team2);
+      console.log("Original Array Remains Untouched -", team1);
+      console.log("");
+
+      console.log("2) Copying an array using array.concat");
+      const team3 = [].concat(team1);
+      team3[1] = "Hanuman";
+      console.log("Copied Array -", team3);
+      console.log("Original Array Remains Untouched -", team1);
+      console.log("");
+
+      console.log("3) Copying an array using Spread Operator");
+      const team4 = [...team1];
+      team4[0] = "Jim";
+      console.log("Copied Array -", team4);
+      console.log("Original Array Remains Untouched -", team1);
+      console.log("");
+
+      console.log("3) Copying an array using Array.from");
+      const team5 = Array.from(team1);
+      team5[3] = "Mary";
+      console.log("Copied Array -", team5);
+      console.log("Original Array Remains Untouched -", team1);
+      console.log("");
+      console.log("");
+
+      // Object Copy
+
+      const person = {
+        name: "James Jacob",
+        age: 30,
+      };
+
+      console.log("The Object : ", person);
+      console.log("");
+
+      console.log("Copying an Object using Object.assign");
+      const personUpdated = Object.assign({}, person, {
+        married: "no",
+        age: 25,
+      });
+      console.log("Copied Object -", person);
+      console.log("Original Object Remains Untouched -", personUpdated);
+      console.log("");
+
+      const nested = {
+        name: "Rosy",
+        age: 55,
+        social: {
+          twitter: "@rosy",
+          facebook: "rosy.developer",
+        },
+      };
+
+      console.log("Nested Object -", nested);
+      console.log("Object.assign will not work for a nested object");
+      console.log(
+        "We can use structuredClone for this. structuredClone() is a native method for deep clone. Ref : https://developer.mozilla.org/en-US/docs/Web/API/structuredClone"
+      );
+
+      const nestedCopy = structuredClone(nested);
+      nestedCopy.social.twitter = "@rosy.lovely";
+      console.log("Copied Object -", nestedCopy);
+      console.log("Original Object Remains Untouched -", nested);
+    </script>
+  </body>
+</html>
