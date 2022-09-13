@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
+html {
+    box-sizing: border-box;
+    background: url("https://images.unsplash.com/photo-1534723452862-4c874018d66d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'ABeeZee', sans-serif;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  .wrapper {
+    padding: 20px;
+    max-width: 350px;
+    background: rgb(0 0 0 / 84%);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+  
+  h2 {
+    text-align: center;
+    margin: 0;
+    font-weight: 200;
+  }
+  
+  .grocery {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+  }
+  
+  .grocery li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    font-weight: 100;
+    display: flex;
+  }
+  
+  .grocery label {
+    flex: 1;
+    cursor: pointer;
+  }
+  
+  .grocery input {
+    display: none;
+  }
+  
+  .grocery input + label:before {
+    content: "⬜️";
+    margin-right: 10px;
+  }
+  
+  .grocery input:checked + label:before {
+    content: "✅";
+  }
+  
+  .add-items {
+    margin-top: 20px;
+  }
+  
+  .add-items input {
+    padding: 10px;
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
