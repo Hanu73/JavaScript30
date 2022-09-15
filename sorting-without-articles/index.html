@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Please open the console</h1>
+
+    <script>
+      const bands = [
+        "The Plot in You",
+        "The Devil Wears Prada",
+        "Pierce the Veil",
+        "Norma Jean",
+        "The Bled",
+        "Say Anything",
+        "The Midway State",
+        "We Came as Romans",
+        "Counterparts",
+        "Oh, Sleeper",
+        "A Skylit Drive",
+        "Anywhere But Here",
+        "An Old Dog",
+      ];
+
+      console.log(
+        "Remove the articles (a, an, the) from sentences and sort them and return the array items unchanged"
+      );
+      console.log("");
+      console.log("Given list of strings with articles (a, an, the) in it", bands);
+
+      const bandsArray = [...bands];
+      bandsArray.sort((a, b) =>
+        removeArticles(a) > removeArticles(b) ? 1 : -1
+      );
+
+      console.log("");
+      console.log("Sorted array 👇 ");
+      console.log(bandsArray);
+
+      function removeArticles(word) {
+        return word.replace(/^(a |an |the)/i, "").trim();
+      }
+    </script>
+  </body>
+</html>
