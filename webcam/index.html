@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webcam</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="display-camera">
+      <div class="controls">
+        <button class="click" onClick="takePhoto()">Snap 📸</button>
+      </div>
+      <div>
+        <canvas class="photo"></canvas>
+      </div>
+      <video class="player"></video>
+    </div>
+    <div class="strip"></div>
+
+    <div class="no-access">
+      <h2 class="error"></h2>
+      <div class="no">🚫</div>
+    </div>
+
+    <audio class="snap" src="./snap.mp3" hidden></audio>
+
+    <script src="script.js"></script>
+  </body>
 </html>
