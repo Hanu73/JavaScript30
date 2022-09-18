@@ -1,0 +1,49 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.8);
+  font-family: "helvetica neue";
+  font-weight: 200;
+  font-size: 20px;
+  font-family: "Inknut Antiqua", serif;
+}
+
+.words {
+  max-width: 500px;
+  margin: 50px auto;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem 1rem 5rem;
+  background: -webkit-gradient(
+      linear,
+      0 0,
+      0 100%,
+      from(lime),
+      color-stop(4%, #000)
+    )
+    0 4px;
+  background-size: 100% 3rem;
+  position: relative;
+  line-height: 3rem;
+}
+
+p {
+  margin: 0 0 3rem;
+  color: #fff;
+}
+
+.heading,
+.sub-heading {
+  text-align: center;
+  color: #fff;
+}
+.heading{ 
+  font-size: 1.3rem;
+  margin-bottom: 0px;
+}
+.sub-heading { 
+  font-size: 1rem;
+  margin: 0;
+}
