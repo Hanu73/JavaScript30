@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speech Synthesis</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3>The Voicenator</h3>
+      <p>Write the text, choose the voice & hit play to listen</p>
+      <div>
+        <select name="voices" id="voices">
+          <option value="">Choose a voice</option>
+        </select>
+      </div>
+
+      <div>
+        <textarea
+          name="text"
+          id="msg"
+          rows="8"
+          columns="20"
+          placeholder="Please write your message here & hit play"
+        ></textarea>
+      </div>
+
+      <div>
+        <button id="speak">Play ▶</button>
+        <button id="stop">Stop ⏹</button>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
