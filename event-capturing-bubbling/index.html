@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Capture, Propagation, Bubbling and Once</title>
+  </head>
+  <body class="bod">
+    <h1 style="text-align: center">PLEASE CHECK CONSOLE</h1>
+    <div class="one">
+      ONE
+      <div class="two">
+        TWO
+        <div class="three">THREE</div>
+      </div>
+    </div>
+
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      div {
+        width: 100%;
+        padding: 100px;
+      }
+
+      .one {
+        background: rgb(233 168 183);
+      }
+
+      .two {
+        background: rgb(29, 164, 210);
+      }
+
+      .three {
+        background: rgb(255, 255, 255);
+      }
+    </style>
+
+    <button>Trigger Once</button>
+    <script>
+      const divs = document.querySelectorAll("div");
+      const button = document.querySelector("button");
+
+      function logText(e) {
+        console.log(this.classList.value);
+      }
+
+      divs.forEach((div) =>
+        div.addEventListener("click", logText, {
+          capture: true,
+        })
+      );
+
+      button.addEventListener(
+        "click",
+        () => {
+          console.log("Click!!!");
+        },
+        {
+          once: true, // trigger only once, unbinds the event
+        }
+      );
+    </script>
+  </body>
+</html>
