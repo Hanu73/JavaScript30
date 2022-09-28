@@ -19,7 +19,7 @@ function randomHole(holes) {
   return hole;
 }
 
-function hidenseek() {
+function hidenseek() { 
   // Can provide an option in future to user for increasing the speed
   const time = randomTime(100, 1000);
   const hole = randomHole(holes);
