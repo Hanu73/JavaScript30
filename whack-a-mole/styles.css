@@ -105,3 +105,10 @@ h1 {
     width: 100vw;
   }
 }
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 3rem;
+    text-align: left;
+  }
+}
